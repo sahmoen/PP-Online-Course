@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <style>
+  body {
+  background-image: url("../assets/magician.png");
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-color:rgb(48, 51, 51);
+    }
+
+    .column {
+      float: left;
+      width: 25%;
+      margin-bottom: 16px;
+      padding: 10 10px;
+    }
+    /* Display the columns below each other instead of side by side on small screens */
+    @media screen and (max-width: 650px) {
+      .column {
+        width: 100%;
+        display: block;
+      }
+    }
+    /* Add some shadows to create a card effect */
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+    /* Some left and right padding inside the container */
+    .container {
+      padding: 0 16px;
+    }
+    /* Clear floats */
+    .container::after,
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    .title {
+      color: grey;
+    }
+    .button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+    }
+    .button:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="/">HOGWARTS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/home/courses">Spell</a>
+          </li>
+          <% if(role == 1) { %>
+            <li class="nav-item">
+              <a href= "/home/courses/add" class="nav-link">Add</a>
+            </li>
+        <%}%>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li >
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </nav> <br><br>
+  <div class="container main">
+    <h1 class="main text-light">Welcome! <%= userprofile[0].fullName%> </h1>
+</div>
+
+<div class="search container main mb-3">
+<div class="search container mt-2 mb-5 mx-1">
+
+    <form class="d-flex" action="/home/courses" method="GET">
+        <input class="form-control me-2" type="search" placeholder="Search by name" name="searchName">
+        <input class="form-control me-2" type="search" placeholder="Search by desc" name="searchDesc">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+</div>
+
+<!-- <main> -->
+  <!---ini contoh-->
+  <div class="row justify-content-center">
+    <% data.forEach(el => { %>
+    <div class="col-md-6 mb-4">
+        <div class="card" style="height: 100%">
+          <img src="<%= el.imageURL %>"alt="" class="card-img-top" alt="art" style="width: 100%; height: 60%;">
+          <div class="card-body">
+            <h5 class="card-title"><%= el.name %></h5>
+            <p class="card-text" style="height: 45%;overflow: auto;"><%= el.description %></p>
+            <h6 class="mt-3">Price: <%= formatRupiah(el.price) %></h6>
+              <% if(role == 1){ %>
+              <a href= "/home/courses/edit/<%= el.id %>" class="btn btn-secondary">Edit</a>
+             <a href= "/home/courses/delete/<%= el.id %>" class="btn btn-danger">Delete</a>
+              <% } else if(role == 2){ %>
+              <% if(purchased.filter(element => element.id == el.id)[0]) {%>
+              <h6>purchased</h6>
+            <%} else {%>
+          <a href= "/home/courses/buy/<%= el.id %>" class="btn btn-primary"> Buy </a>
+          <%}%>
+          <% }%>
+          </div>
+        </div>  
+    </div>
+    <%})%>
+</div>
+</body>
+
+</html> 

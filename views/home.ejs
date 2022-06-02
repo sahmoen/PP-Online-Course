@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 150%), url(../assets/castle.png); background-size: auto">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+          <a class="navbar-brand" href="/home">HOGWARTS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <% if (!id) { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/register">Register</a>
+              </li>
+              <% } %>
+              <li class="nav-item">
+                <a class="nav-link" href="/home/courses">Spell</a>
+              </li>
+              <% if(id){ %>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End NavBar -->
+
+      <!-- Jumbotron -->
+      <div class="jumbotron text-center pt-2">
+        <% if (!id) { %>
+        <h1 class="display-4">Welcome To HOGWARTS!</h1>
+        <h1 class="lead">HOGWARTS helps students to increase their skills by studying new spell. Accompanied by a reliable instructor makes students learn faster.</h1>
+        <% } else { %>
+          <h1 class="display-4">WELCOME To HOGWARTS <%= dataUser[0].fullName %> !</h1>
+          <% } %>
+        <!-- <hr class="my-4" /> -->
+        <% if (!id) { %>
+        <h4>Join now, don't miss it</h4>
+        <h5>click this</h5>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+        </svg>
+        <div class="pt-4">
+          <a class="btn btn-warning btn-lg" href="/register" role="button">Register</a>
+        </div>
+        <% } else { %>
+        <h4>Now, You can learn MAGIC SPELL!!</h4>
+        <h5>click this</h5>
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+        </svg>
+        <div class="pt-4">
+          <a class="btn btn-primary btn-lg" href="/home/courses" role="button">List Spell</a>
+        </div>
+        <% } %>
+      </div>
+      <!-- End Jumbotron -->
+
+      <!-- about -->
+      <div class="container pt-4 text-center">
+        <div class="row">
+          <div class="col"><h5>About Us:</h5></div>
+        </div>
+        <div class="row justify-content-evenly pt-4">
+          <div class="col-4">
+            <h6>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam ullam, magni deleniti velit dolore sapiente possimus est, iure optio nulla ea quidem distinctio maiores officiis neque necessitatibus eum aliquid aspernatur!
+            </h6>
+          </div>
+          <div class="col-4">
+            <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga qui, sunt voluptatem nulla iusto quibusdam, non at suscipit voluptatibus maiores ipsa vero eligendi esse. Magni dicta voluptatem ipsa similique voluptate.</h6>
+          </div>
+        </div>
+      </div>
+      <!-- end about -->
+
+      <!-- footer -->
+      <footer class="py-5 sticky-bottom">
+        <div class="container px-4 px-lg-5">
+          <div class="small text-center text-muted"><h6>Copyright &copy; Dinara Hafla 2022 - HOGWARTS</h6></div>
+        </div>
+      </footer>
+      <!-- end footer -->
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

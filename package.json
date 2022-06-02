@@ -1,0 +1,36 @@
+{
+  "name": "pair-project",
+  "version": "1.0.0",
+  "description": "Pair Project Batch 24",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xenholic/pair-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xenholic/pair-project/issues"
+  },
+  "homepage": "https://github.com/xenholic/pair-project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "nodemailer": "^6.7.5",
+    "pg": "^8.7.3",
+    "sequelize": "^6.20.0"
+  },
+  "devDependencies": {
+    "install": "^0.13.0",
+    "nodemon": "^2.0.16",
+    "npm": "^8.11.0",
+    "sequelize-cli": "^6.4.1"
+  }
+}

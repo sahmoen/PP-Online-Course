@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Expecto Patronum",
+        "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxjkZ9hilzvUZWGUzCs6VmPepMs_d4Di4RjbuOeM-tZiJmJ8wXv0eghhc-7VIAx7_7b-M&usqp=CAU",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "price": 1000000
+    },
+    {
+        "name": "Netrificus Totalus",
+        "imageURL": "https://static7.depositphotos.com/1050781/681/i/450/depositphotos_6819631-stock-photo-magic-book.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "price": 2500000
+    },
+    {
+        "name": "Sectumsempra",
+        "imageURL": "https://static3.depositphotos.com/1005222/205/i/450/depositphotos_2052077-stock-photo-the-magic-book.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "price": 4000000
+    },
+    {
+        "name": "Expelliarmus",
+        "imageURL": "https://s.kaskus.id/r480x480/images/fjb/2015/04/18/novel_harry_potter_hardcover__buku_pelajaran_sekolah_sihir_hogwarts_169409_1429340267.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "price": 300000
+    },
+    {
+        "name": "Cruciatus Curse",
+        "imageURL": "http://asset-a.grid.id/crop/73x39:685x419/x/photo/2019/04/08/359464005.png",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "price": 8900000
+    },
+    {
+        "name": "Avada Kedavra",
+        "imageURL": "https://www.gramedia.com/blog/content/images/size/w600/2018/10/Review-Buku-harry-Potter-Cursed-Child.jpg",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "price": 1500000
+    }
+]
