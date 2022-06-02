@@ -1,2 +1,5 @@
 # pair-project
-Pair Project Batch 24
+Pair Project
+
+#Link Heroku
+https://belajarsantet.herokuapp.com/
